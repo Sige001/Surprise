@@ -13,7 +13,7 @@
             padding: 0;
         }
 
-        /* Unified Dark Elegant Theme */
+       /* Unified Dark Elegant Theme */
         body {
             background-color: #1a1a1a; 
             font-family: 'Playfair Display', serif;
@@ -21,7 +21,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            /* FIX: Allow vertical scrolling on mobile so headings don't get cut off */
+            overflow-y: auto;
             overflow-x: hidden;
+            padding: 20px 0;
         }
 
         .screen {
@@ -33,13 +36,16 @@
             width: 100%;
             max-width: 800px;
             padding: 20px;
-            position: absolute;
+            /* FIX: Changed from absolute to relative so it respects screen heights on mobile */
+            position: relative; 
             opacity: 1;
             transition: opacity 0.5s ease, transform 0.5s ease;
         }
 
+        /* FIX: Ensure hidden screens completely disappear and don't take up blank scrolling space */
         .hidden {
             display: none !important;
+            position: absolute;
             opacity: 0;
             transform: scale(0.95);
         }
@@ -377,7 +383,7 @@
     </div>
 
     <div id="screen-cake3" class="screen hidden">
-        <h1 class="title">EATTTTTTT...</h1>
+        <h1 class="title">EATTTT...</h1>
         <p class="subtitle">Munch munch munch, don't be shy &lt;3</p>
         <div class="cake-container" onclick="showScreen('screen-hub')">
             <svg viewBox="0 0 100 100" width="100%" height="100%">
