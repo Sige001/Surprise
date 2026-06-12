@@ -167,7 +167,7 @@
             background: none; 
             border: 1.5px dashed rgba(255, 255, 255, 0.4); 
             border-radius: 12px;
-            padding: 24px 12px 12px 12px;
+            padding: 12px;
             width: 180px;
             height: 260px; 
             cursor: pointer;
@@ -175,7 +175,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-between;
+            /* CHANGED TO CENTER TO PLACE THE BEARS PERFECTLY IN THE MIDDLE */
+            justify-content: center; 
             overflow: hidden;
             position: relative;
         }
@@ -389,28 +390,22 @@
         </div>
         <p class="handwritten-hint">** click your slice to enter **</p>
     </div>
-
+ 
     <div id="screen-hub" class="screen hidden">
         <h1 class="title" style="font-size: 3.5rem;">Special for you</h1>
         <p class="subtitle">CHOOSE A CARD TO OPEN</p>
         <div class="hub-grid">
             
             <div class="hub-card" onclick="showScreen('mod-flowers')">
-                <span class="card-label">🌸 Flowers</span>
                 <img src="Bear.jpg" class="bear-img" alt="Card Graphic">
-                <span class="card-desc">Bouquets & meanings.</span>
             </div>
 
             <div class="hub-card" onclick="showScreen('mod-music')">
-                <span class="card-label">🎵 Music</span>
                 <img src="Bear.jpg" class="bear-img" alt="Card Graphic">
-                <span class="card-desc">Our favorite melody.</span>
             </div>
 
             <div class="hub-card" onclick="showScreen('mod-letter')">
-                <span class="card-label">✉️ Letter</span>
                 <img src="Bear.jpg" class="bear-img" alt="Card Graphic">
-                <span class="card-desc">A message from me.</span>
             </div>
 
         </div>
